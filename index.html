@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripts | Star X</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function searchVideos() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const cards = document.getElementsByClassName("card");
+
+            for (let card of cards) {
+                const title = card.getElementsByTagName("h2")[0].innerText.toLowerCase();
+                if (title.includes(input)) {
+                    card.style.display = ""; // Tampilkan jika cocok
+                } else {
+                    card.style.display = "none"; // Sembunyikan jika tidak cocok
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Sidebar Navbar -->
+    <nav class="navbar-top">
+        <div class="nav-links">
+            <a href="executor.html">Executors</a>
+            <a href="support.html">Support</a>
+            <a href="main.html">Main</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" onkeyup="searchVideos()" placeholder="Search Scripts..." />
+        </div>
+    </nav>
+
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="speedv2.jpg" alt="Thumbnail Video 1">
+                <div class="card-content">
+                    <h2>Blade Ball: Speed Hub V2</h2>
+                    <p>GOD PARRY, AUTO FARMS, OPTIMIZE, ANTI BAN</p>
+                    <a href="https://gateway.platoboost.com/l/80992/16e2f80h" target="_blank">
+                        <button>Get Scripts</button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
